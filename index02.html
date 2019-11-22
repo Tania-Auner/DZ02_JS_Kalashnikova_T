@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DZ02</title>
+</head>
+<body>
+    <script>
+        var userArray =[];
+
+        var callUsers = prompt("Введите количество пользователей"); //callUsers - на случай когда количество пользователей меняется в зависимости от размера баззы данных, которую мы хотим создать
+        for (i=0; i<callUsers; i++) {
+            var name = prompt ("Введите Ваше имя");
+            var surname = prompt ("Введите Вашу фамилию");
+            if (name.length<3 && surname.length<3){
+                    alert("Введены некорректные данные, попробуйте еще раз");
+                    location.reload(true); //если данные введены некорректно, появляется сообщение и после нажатия на кнопку "ок" страница автоматически перезагружается
+                    break;
+            }
+            
+            else {
+                var yourDate = prompt ("ВВедите Вашу дату рождения в формате год/месяц/день");
+                var userData = {name:name, surname:surname, yourDate:yourDate};
+                userArray.push(userData)
+            }
+        }
+        console.log(userArray)
+
+    
+    
+    </script>
+</body>
+</html>
